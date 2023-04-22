@@ -1,0 +1,325 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_add_address_parent_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:fillViewport="true"
+    android:focusable="true"
+    android:forceDarkAllowed="false"
+    tools:context="com.ritualkart.sevahetu.ui.maplocation.AddressBottomSheetFragment">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:paddingBottom="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_city_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="#636262"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_address_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view">
+
+                    <ImageButton
+                        android:id="@+id/back_button"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:src="@drawable/ic_back_arrow"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tv_label_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/back_button"
+                        android:text="ADD ADDRESS"
+                        android:textColor="#2E2E2E"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_address_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rl_address_title"
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_notify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_notify"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sample_address_label"
+                        android:layout_toRightOf="@id/iv_notify"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/jost_regular"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_18sdp"
+                    android:background="@drawable/bg_rounded_grey"
+                    app:layout_constraintTop_toBottomOf="@+id/rl_address_label" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_choose_your_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_18sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_linear">
+
+                    <LinearLayout
+                        android:id="@+id/ll_current_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/icon_material_location_on" />
+
+                        <TextView
+                            android:id="@+id/tv_landmark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:fontFamily="@font/jost_medium"
+                            android:text="H Block"
+                            android:textColor="#2B2B2B"
+                            android:textSize="@dimen/_16sdp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_current_location"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+                            android:id="@+id/tv_locality"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="@dimen/_40sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/jost_medium"
+                            android:maxLines="2"
+                            android:text="H11, Noida sector 63, electronic city, noida.."
+                            android:textColor="#2B2B2B"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_edit_location"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/_3sdp"
+                        android:visibility="visible"
+                        android:src="@drawable/ic_edit_grey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </RelativeLayout>
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_18sdp"
+                    android:background="@drawable/bg_rounded_grey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rl_choose_your_location" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_18sdp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view2">
+
+                    <TextView
+                        style="@style/AddressTextView"
+                        android:layout_width="wrap_content"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:text="LOCALITY*" />
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/act_locality"
+                        style="@style/AddressEdittext"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/et_rounded_box_grey"
+                        android:completionThreshold="3"
+                        android:inputType="text"
+                        android:ellipsize="end"
+                        android:maxLines="2">
+
+                    </androidx.appcompat.widget.AppCompatAutoCompleteTextView>
+
+                    <TextView
+                        android:id="@+id/tv_act_locality_error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/jost_medium"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:textColor="#DC3545"
+                        android:textSize="@dimen/_10sdp"
+                        android:visibility="gone"
+                        />
+
+                    <TextView
+                        style="@style/AddressTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HOUSE NO./FLAT NO.*" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_house_flat"
+                        style="@style/AddressEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/et_rounded_box_grey"
+                        android:inputType="text|textVisiblePassword">
+
+                    </androidx.appcompat.widget.AppCompatEditText>
+
+                    <TextView
+                        style="@style/AddressTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="APARTMENT/BUILDING NAME/COLONY*" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_apartment"
+                        style="@style/AddressEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:importantForAutofill="no"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/et_rounded_box_grey"
+                        android:maxLines="2">
+
+                    </androidx.appcompat.widget.AppCompatEditText>
+
+                    <TextView
+                        style="@style/AddressTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="LANDMARK*" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_landmark"
+                        style="@style/AddressEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textFilter"
+                        android:importantForAutofill="no"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/et_rounded_box_grey"
+                        android:maxLines="2">
+
+                    </androidx.appcompat.widget.AppCompatEditText>
+
+
+
+                    <include
+                        android:id="@+id/btn_edit"
+                        layout="@layout/layout_submit_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginTop="@dimen/_20sdp" />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminateTint="@color/madison"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

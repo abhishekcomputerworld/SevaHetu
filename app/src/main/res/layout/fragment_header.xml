@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:elevation="@dimen/_20sdp">
+
+    <ImageView
+        android:id="@+id/iv_back_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/ic_back_arrow" />
+
+    <TextView
+        android:id="@+id/tv_title_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_toRightOf="@id/iv_back_fragment"
+        android:ellipsize="end"
+        android:fontFamily="@font/jost_semibold"
+        android:maxLines="1"
+        android:text="My Toolbar"
+        android:textColor="#2E2E2E"
+        android:textSize="@dimen/_16sdp" />
+</RelativeLayout>

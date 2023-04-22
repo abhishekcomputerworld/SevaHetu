@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">SevaHetu</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_collection">Collection</string>
+    <string name="title_cart">Added Cart</string>
+    <string name="title_occasion">Occasion Combo</string>
+    <string name="title_priest">Pujari</string>
+    <string name="empty_cart">You Have Not Selected at</string>
+    <string name="empty_cart_subtitle">"Add Items To Your Cart "</string>
+    <string name="continue_text"> Explore Items</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_phone_number">Enter Mobile Number</string>
+    <string name="by_continuing">By continuing, you agree to our</string>
+    <string name="term_and_conditions">Terms &amp; Conditions</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="login">Login</string>
+    <string name="enter_verification_code">Enter Verification Code</string>
+    <string name="enter_the_digit">Enter the 6-digit OTP sent to</string>
+    <string name="change_mobile_nomber">Change Number</string>
+    <string name="otp">OTP</string>
+    <string name="invalid_otp">Invalid OTP</string>
+    <string name="clear_otp">Clear OTP</string>
+    <string name="not_received_code">Didn\'t receive the code?</string>
+    <string name="change_mobile_number">Change Number</string>
+
+
+    <string name="mobile_number_size">Mobile number should be 10 digits</string>
+    <string name="mobile_number_validation">Mobile Number is not valid</string>
+    <string name="otp_empty">Otp can not be empty</string>
+    <string name="otp_size">Otp is not complete</string>
+    <string name="call_us_now">Call Us Now</string>
+
+    <string name="empty_or_wrong">Mobile Number can not be empty</string>
+    <string name="no_internet">No Internet Connection Available</string>
+    <string name="sample_address_label">Your sample will be collected as per details</string>
+
+    <string name="edit_address_details">EDIT ADDRESS DETAILS</string>
+    <string name="add_address_details">ADD ADDRESS DETAILS</string>
+    <string name="save_address">SAVE ADDRESS</string>
+
+    <string name="profile">Profile</string>
+    <string name="name">NAME*</string>
+    <string name="personal_info">Personal Info</string>
+    <string name="gender">GENDER*</string>
+    <string name="age">AGE*</string>
+    <string name="mobile_number">MOBILE NUMBER</string>
+    <string name="email_id">EMAIL ID*</string>
+    <string name="edit">EDIT</string>
+    <string name="edit_personal">Edit Personal Info</string>
+    <string name="save">SAVE</string>
+    <string name="cancel">CANCEL</string>
+
+</resources>

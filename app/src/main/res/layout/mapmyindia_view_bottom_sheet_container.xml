@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/user_location_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="gone"
+        app:backgroundTint="@color/mapmyindia_plugins_white"
+        app:elevation="3dp"
+        app:layout_anchor="@id/root_bottom_sheet"
+        app:layout_anchorGravity="top|end"
+        app:srcCompat="@drawable/mapmyindia_plugins_ic_user_location"
+        app:useCompatPadding="true" />
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:paddingBottom="4dp"
+        app:layout_anchor="@id/root_bottom_sheet"
+        app:srcCompat="@drawable/mapmyindia_logo_icon"/>
+
+    <RelativeLayout
+        android:id="@+id/root_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/mapmyindia_bottom_sheet_bg"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+        <include
+            layout="@layout/mapmyindia_view_details_bottom_header"/>
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

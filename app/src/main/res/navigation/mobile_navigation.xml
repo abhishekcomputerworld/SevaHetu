@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.ritualkart.sevahetu.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_cartFragment"
+            app:destination="@id/navigation_cartFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_comboFragment"
+            app:destination="@id/navigation_occasion_combo" />
+        <action
+            android:id="@+id/action_navigation_home_to_saintFragment"
+            app:destination="@id/navigation_priest" />
+        <action
+            android:id="@+id/action_navigation_home_to_selectLocationBottomSheetFragment"
+            app:destination="@id/selectLocationBottomSheetFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.ritualkart.sevahetu.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_navigation_dashboard_to_sendOtpFragment"
+            app:destination="@id/sendOtpFragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_self"
+            app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_selectLocationBottomSheetFragment"
+            app:destination="@id/selectLocationBottomSheetFragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_editPersonalInfoFragment"
+            app:destination="@id/editPersonalInfoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_cartFragment"
+        android:name="com.ritualkart.sevahetu.ui.cart.CartFragment"
+        android:label="@string/title_cart"
+        tools:layout="@layout/fragment_cart">
+        <action
+            android:id="@+id/action_navigation_cartFragment_to_sendOtpFragment"
+            app:destination="@id/sendOtpFragment" />
+        <action
+            android:id="@+id/action_navigation_cartFragment_to_selectLocationBottomSheetFragment"
+            app:destination="@id/selectLocationBottomSheetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendOtpFragment"
+        android:name="com.ritualkart.sevahetu.ui.dashboard.login.SendOtpFragment"
+        android:label="fragment_send_otp"
+        tools:layout="@layout/fragment_send_otp">
+        <action
+            android:id="@+id/action_sendOtpFragment_to_otpVerificationFragment"
+            app:destination="@id/otpVerificationFragment" />
+        <action
+            android:id="@+id/action_sendOtpFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment"
+            app:popUpTo="@id/webViewFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/otpVerificationFragment"
+        android:name="com.ritualkart.sevahetu.ui.dashboard.login.OtpVerificationFragment"
+        android:label="fragment_otp_verification"
+        tools:layout="@layout/fragment_otp_verification">
+        <action
+            android:id="@+id/action_otpVerificationFragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.ritualkart.sevahetu.ui.dashboard.webview.WebViewFragment"
+        android:label="WebViewFragment" />
+    <fragment
+        android:id="@+id/selectLocationFromMapFragment"
+        android:name="com.ritualkart.sevahetu.ui.maplocation.SelectLocationFromMapFragment"
+        android:label="SelectLocationFromMapFragment"></fragment>
+    <fragment
+        android:id="@+id/navigation_occasion_combo"
+        android:name="com.ritualkart.sevahetu.ui.occasionalCombo.ComboFragment"
+        android:label="fragment_combo"
+        tools:layout="@layout/fragment_combo" />
+    <fragment
+        android:id="@+id/navigation_priest"
+        android:name="com.ritualkart.sevahetu.ui.priest.SaintFragment"
+        android:label="fragment_saint"
+        tools:layout="@layout/fragment_saint" />
+    <dialog
+        android:id="@+id/selectLocationBottomSheetFragment"
+        android:name="com.ritualkart.sevahetu.ui.maplocation.SelectLocationBottomSheetFragment"
+        android:label="SelectLocationBottomSheetFragment">
+        <action
+            android:id="@+id/action_selectLocationBottomSheetFragment_to_selectLocationFromMapFragment"
+            app:destination="@id/selectLocationFromMapFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/editPersonalInfoFragment"
+        android:name="com.ritualkart.sevahetu.ui.dashboard.EditPersonalInfoFragment"
+        android:label="EditPersonalInfoFragment" >
+        <action
+            android:id="@+id/action_editPersonalInfoFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+</navigation>

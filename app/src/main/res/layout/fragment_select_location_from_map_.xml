@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mapmyindia_picker_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_43sdp"
+        android:layout_margin="@dimen/_13sdp"
+        android:background="@drawable/bg_search_box"
+        android:elevation="@dimen/_5sdp"
+        android:visibility="visible"
+        app:closeIcon="@drawable/ic_close_black"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:queryBackground="@null"
+        app:queryHint="Search for area, Streen Name.."
+        app:searchIcon="@drawable/ic_search">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/_13sdp"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="@dimen/_12sdp"
+            android:text="Search for area, Streen Name.." />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/mapmyindia_plugins_image_view_marker"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mapmyindia_pin_red_marker" />
+
+    <ImageView
+        android:id="@+id/mapmyindia_plugins_image_view_shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/map_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mapmyindia_plugins_image_view_marker"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/map_default_map_marker_shadow" />
+
+    <com.mapmyindia.sdk.maps.MapView
+        android:id="@+id/map_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.mapmyindia.sdk.maps.MapView>
+
+
+    <com.ritualkart.sevahetu.ui.maplocation.CurrentPlaceSelectionBottomSheet
+          android:id="@+id/mapmyindia_plugins_picker_bottom_sheet"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          app:layout_constraintBottom_toTopOf="@id/cv_place_choosen"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/cv_place_choosen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/place_chosen_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_button_rounded_pink"
+            android:fontFamily="@font/jost_medium"
+            android:padding="@dimen/_10sdp"
+            android:text="Enter Full Address"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

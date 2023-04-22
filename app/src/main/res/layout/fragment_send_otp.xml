@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_parent_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:forceDarkAllowed="false"
+    tools:context=".ui.dashboard.login.SendOtpFragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include_header"
+            layout="@layout/fragment_header" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_4sdp"
+            android:background="@drawable/bg_drop_shadow" />
+
+        <TextView
+            android:id="@+id/tv_enter_your_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/jost_medium"
+            android:padding="@dimen/_2sdp"
+            android:text="Enter Your Mobile Number"
+            android:textColor="#707070"
+            android:textSize="@dimen/_16sdp" />
+
+        <include
+            android:id="@+id/et_phone_number"
+            layout="@layout/layout_phone_editbox"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_20sdp"></include>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_term"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_25sdp">
+
+            <CheckBox
+                android:id="@+id/cb_term"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#018786"
+                android:checked="true"
+                android:padding="0dp"
+                android:translationX="-5dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_term"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="-10dp"
+                android:layout_toRightOf="@id/cb_term"
+                android:fontFamily="@font/jost_regular"
+                android:forceDarkAllowed="false"
+                android:lineSpacingMultiplier="1"
+                android:textColor="#A2A2A2"
+                android:textSize="@dimen/_13sdp" />
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/btn_continue"
+            layout="@layout/layout_submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp">
+
+        </include>
+
+        <TextView
+            android:id="@+id/tv_hash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/jost_semibold"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/blue"
+        android:visibility="gone" />
+</RelativeLayout>
